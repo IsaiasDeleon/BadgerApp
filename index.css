@@ -13,7 +13,7 @@
     src: url('Nexa\ Bold.otf') format('truetype');
   }
 .menu-head{
-    background: rgb(63, 67, 63);
+    background: #2c2c2c;
     height: 100%;
     position: fixed;
     transform: translateX(0);
@@ -55,7 +55,7 @@ section{
     padding-bottom: 0;
 }
 .content-index{
-    background: url('assets/Prueba.png');
+    background: url('assets/Bad2.png');
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover;
