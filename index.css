@@ -1,18 +1,43 @@
-*{
+* {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    
+
 }
+
+:root {
+    --big-font-size: 4rem;
+    --h1-font-size: 2.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1.5rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+    --color-input: rgb(230, 235, 243);
+}
+
+body {
+    overflow-x: hidden;
+}
+
 @font-face {
     font-family: 'Nexa';
     src: url('Nexa\ Light.otf') format('truetype');
 }
-  @font-face {
+
+@font-face {
     font-family: 'Nexa2';
     src: url('Nexa\ Bold.otf') format('truetype');
-  }
-.menu-head{
+}
+.menutoggle{
+    position:absolute; left:25px; top: 25px; z-index:10; color:#fff;
+    display: none;
+}
+#BTNCE{
+    float:right; margin:15px;
+    display:none;
+}
+.menu-head {
     background: #2c2c2c;
     height: 100%;
     position: fixed;
@@ -24,28 +49,79 @@
     color: #fff;
     font-family: Nexa;
 }
-.menu-head .contenedor{
+.menu-head a{
+    color:#fff;
+    text-decoration: none;
+}
+.menu-headActive {
+    left: 0%;
+}
+.Logo {
+    width: 130px;
+}
+
+.menu-head .contenedor {
     margin-top: 100px;
 }
-.menu-head .menu-links{
+
+.menu-head .menu-links {
     align-items: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     overflow: hidden;
 }
-.menu-links .div-links{
+
+.menu-links .div-links {
     margin-top: 30px;
     width: 140px;
     padding: 5px;
     text-align: center;
 }
-section{
+
+section {
     padding-left: 140px;
     font-family: Nexa2;
 }
 
-.section-index{
+.Texto-Index-Section {
+    position: absolute;
+    top: 0;
+    right: 100px;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+}
+
+.Texto-Index-Section img {
+    width: 400px
+}
+
+.Texto-Index-Section h1 {
+    font-size: var(--big-font-size);
+}
+
+.Texto-Index-Section h3 {
+    font-size: var(--h3-font-size);
+}
+
+.Diesño-bottom {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: calc(100% - 100px);
+    height: 250px;
+    overflow: hidden;
+}
+
+.Diesño-bottom h1 {
+    font-size: var(--h1-font-size);
+}
+
+.section-index {
     position: relative;
     width: 100%;
     height: 100vh;
@@ -54,18 +130,23 @@ section{
     padding-right: 0px;
     padding-bottom: 0;
 }
-.content-index{
+
+.content-index {
     background: url('assets/Bad2.png');
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
+    background-position: center;
+    /* Center the image */
+    background-repeat: no-repeat;
+    /* Do not repeat the image */
     background-size: cover;
     width: 100%;
     height: 100%;
 }
-.text-col{
-    font-family: Nexa2!important;
+
+.text-col {
+    font-family: Nexa2 !important;
 }
-.wave{
+
+.wave {
     grid-column: 1/7;
     grid-row: 9/11;
     height: auto;
@@ -73,60 +154,477 @@ section{
     margin-top: 50px;
     overflow: hidden;
     background: url('assets/wave\ \(1\).svg');
-    background-repeat: no-repeat; /* Do not repeat the image */
+    background-repeat: no-repeat;
+    /* Do not repeat the image */
     background-size: cover;
 }
-.socios{
-   
+
+.socios {
     height: auto;
     min-height: 200px;
     overflow: hidden;
     background: url('assets/wave\ \(2\).svg');
-    background-repeat: no-repeat; /* Do not repeat the image */
+    background-repeat: no-repeat;
+    /* Do not repeat the image */
     background-size: cover;
+    padding: 100px;
+    padding-bottom: 200px;
+    padding-left: 240px;
 }
-.container-card-socios{
+
+.container-card-socios {
     display: flex;
+    flex-wrap: wrap;
 }
-.card-socios{
+
+.card-socios {
     border-radius: 10px;
     margin-left: 10px;
     height: 100px;
     background: transparent;
     /* border: 1px solid rgb(194, 194, 194); */
-    flex: 1;
+    flex-basis: 15%;
     transition: .3s all ease;
+
 }
-.card-socios:hover{
-    flex: 1.4;
+
+.card-socios:hover {
+    flex-basis: 20%;
 }
-.card-socios img{
+
+.card-socios img {
     width: 100%;
 }
-.contactanos-index{
+
+.contactanos-index {
     height: auto;
     min-height: 500px;
     overflow: hidden;
     background: url('assets/Fondo2.0.webp');
-    background-repeat: no-repeat; /* Do not repeat the image */
+    background-repeat: no-repeat;
+    /* Do not repeat the image */
     background-size: cover;
     filter: brightness(.9);
     border-radius: 10px;
 }
-.fondo-contactanos-index{
+
+.fondo-contactanos-index {
     background: rgb(241, 196, 1);
-    background: linear-gradient(0deg, rgba(241, 196, 15,.7) 0%, rgba(241, 196, 15,.3) 100%);
+    background: linear-gradient(0deg, rgba(241, 196, 15, .7) 0%, rgba(241, 196, 15, .3) 100%);
     width: 100%;
     height: 100%;
     transform: rotate(60deg) translateY(68%) translateX(-20%);
 }
-footer{
+
+.maximiza {
+    padding: 100px;
+    padding-top: 0;
+    padding-left: 240px;
+    padding-right: 0;
+}
+
+footer {
     background: #2c2c2c;
+    padding: 100px; padding-left: 240px;
 }
-.footer-text-logo{
+.divGridFooter{
+    display: grid; grid-template-columns: 34% 2% 64%;
+}
+.footer-text-logo {
     color: #fff;
-    font-family: Nexa!important;
+    font-family: Nexa !important;
+    font-size: var(--h3-font-size);
 }
+.text-footer{
+    display: grid; grid-template-columns: 31% 3.5% 31% 3.5% 31%; color:#fff
+}
+.text-footer h3{
+    font-size: var(--h3-font-size);
+}
+.text-footer p{
+    font-size: var(--normal-font-size);
+}
+.text-footer h6{
+    font-size: var(--normal-font-size);
+}
+.copyRight{
+    display: block; padding-left: 240px; background-color: black; color: #fff; 
+}
+.ElegirnosPadding {
+    padding: 0 100px;
+}
+
+.sectionSomos {
+    padding: 100px;
+    padding-left: 240px;
+}
+
+.padding10 {
+    padding: 10px;
+}
+
+.ElegirnosPadding h5 {
+    font-size: var(--h3-font-size);
+}
+
+.sectionSomos h1,
+.socios h1 {
+    font-size: var(--h1-font-size);
+}
+
+.sectionSomos h3 {
+    font-size: var(--h2-font-size);
+}
+
+.sectionSomos h5,
+.socios h5 {
+    font-size: var(--h3-font-size);
+}
+
+.sectionSomos img {
+    width: 100px;
+}
+
+.maximiza h2 {
+    font-size: var(--big-font-size);
+}
+
+.maximiza h3 {
+    font-size: var(--h1-font-size);
+}
+
+.maximiza p {
+    font-size: var(--h3-font-size);
+}
+
+.Texto-Index-Section .text-index {
+    text-align: left;
+}
+
+.listado {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    color: #fff;
+    padding: 0 0 50px 0;
+}
+
+.SomosDiv {
+    display: grid;
+    grid-template-columns: auto 2% auto 2% auto
+}
+
+.maximiza-grid {
+    display: grid;
+    grid-template-columns: auto auto
+}
+
+/* OCNTACTO PAGE*/
+.section-contacto{
+    width:100vw; height:auto; padding:80px; padding-left:220px
+}
+.section-contacto h1{
+    font-size: var(--h1-font-size);
+}
+.section-contacto h4{
+    font-size: var(--h3-font-size);
+}
+.divContactanos{
+    display:grid;
+    grid-template-columns:60% 40%
+}
+.formulario-flex{
+    display: flex;
+}
+@media (max-width: 1400px) {
+    :root {
+        --big-font-size: 3rem;
+        --h1-font-size: 2rem;
+        --h2-font-size: 1.25rem;
+        --h3-font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 1300px) {
+    .ElegirnosPadding {
+        padding: 0 20px;
+    }
+
+    .sectionSomos {
+        padding: 50px;
+        padding-left: 160px;
+    }
+
+    .socios {
+        padding: 50px;
+        padding-bottom: 150px;
+        padding-left: 160px;
+    }
+
+    .maximiza {
+        padding: 50px;
+        padding-top: 0;
+        padding-left: 160px;
+        padding-right: 0;
+    }
+    .copyRight{
+     padding-left: 160px; 
+    }
+    .menu-head {
+        width: 110px;
+    }
+
+    .Logo {
+        width: 100px;
+    }
+
+    .section-index {
+
+        padding-left: 90px;
+
+    }
+
+    .Diesño-bottom {
+
+        height: 200px;
+
+    }
+
+    section {
+        padding-left: 120px;
+        font-family: Nexa2;
+    }
+    footer {
+        padding: 50px;
+        padding-left: 160px;
+    }
+    .section-contacto{
+       padding:40px; padding-left:150px
+    }
+}
+
+@media(max-width:960px) {
+    .menutoggle{
+        display: block;
+    }
+    #BTNCE{
+
+        display:block;
+    }
+    .menu-head {
+        width: 50%;
+        left: -51%;
+        transition: 1s;
+    }
+    .menu-headActive {
+        left: 0%;
+    }
+    section {
+        padding-left: 20px;
+    }
+
+    .Diesño-bottom {
+        width: 100%;
+    }
+
+    .section-index {
+        padding: 0px;
+
+    }
+
+    .padding10 {
+        padding: 5px;
+    }
+
+    .sectionSomos {
+        padding: 40px;
+
+    }
+    footer {
+        padding: 20px;
+      
+    }
+    .copyRight{
+        padding-left: 20px; 
+       }
+    .socios {
+        padding: 40px;
+        padding-bottom: 120px;
+
+    }
+    .section-contacto{
+        padding:60px 20px;
+     }
+    .maximiza {
+        padding: 40px;
+        padding-top: 0;
+        padding-right: 0;
+    }
+
+    .ElegirnosPadding h5 {
+        font-size: var(--normal-font-size);
+    }
+
+    .sectionSomos h5 {
+        font-size: var(--normal-font-size);
+    }
+
+    .sectionSomos img {
+        width: 70px;
+    }
+
+    .maximiza h2 {
+        font-size: var(--h1-font-size);
+    }
+
+    .maximiza h3 {
+        font-size: var(--h2-font-size);
+    }
+    .Logo {
+        width: 300px;
+    }
+}
+
+@media (max-width: 850px) {
+    .Texto-Index-Section {
+        width: 90%;
+        right: 5%
+    }
+
+    .Texto-Index-Section .text-index {
+        text-align: center;
+    }
+    .divContactanos{
+
+        grid-template-columns:100%
+    }
+   
+}
+
+@media (max-width: 770px) {
+
+    .listado {
+        grid-template-columns: 33% 33% 33%;
+    }
+
+    .SomosDiv {
+        grid-template-columns: 98% 2%;
+    }
+
+    .card-socios {
+
+        flex-basis: 22%;
+
+    }
+
+    .card-socios:hover {
+        flex-basis: 25%;
+    }
+    .text-footer h3{
+        font-size: var(--normal-font-size);
+    }
+    .text-footer p{
+        font-size: var(--small-font-size);
+    }
+    .text-footer h6{
+        font-size: var(--small-font-size);
+    }
+    .footer-text-logo {
+        
+        font-size: var(--normal-font-size);
+    }
+}
+
+@media (max-width: 650px) {
+    .Diesño-bottom h1 {
+        font-size: var(--h2-font-size);
+    }
+    .divGridFooter{
+        display: grid; grid-template-columns: 100%;
+    }
+}
+
+@media (max-width: 570px) {
+
+    .listado {
+        grid-template-columns: 50% 50%;
+    }
+    section {
+        padding-left: 2px;
+    }
+    .menu-head {
+        width: 100%;
+        left: -101%;
+        transition: 1s;
+    }
+    .menu-headActive {
+        left: 0%;
+    }
+    .Logo {
+        width: 250px;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .maximiza {
+        padding: 10px;
+        padding-bottom: 50px;
+    }
+    
+    .maximiza-grid {
+        grid-template-columns: 100%
+    }
+
+    .maximiza-grid button {
+        flex: 1
+    }
+    .card-socios {
+        flex-basis: 45%;
+    }
+
+    .card-socios:hover {
+        flex-basis: 49%;
+    }
+
+    .ElegirnosPadding {
+        padding: 0 15px;
+    }
+
+    .sectionSomos {
+        padding: 15px;
+
+    }
+
+    .socios {
+        padding: 15px;
+        padding-bottom: 150px;
+    }
+    .text-footer{
+        grid-template-columns: 48% 2% 48% 2%;
+    }
+    .section-contacto{
+        padding:60px 10px;
+     }
+}
+
+@media (max-width: 400px) {
+    .Texto-Index-Section img {
+        width: 350px
+    }
+    .formulario-flex{
+        display: block;
+    }
+    .correo{
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 375px) {
+    .Texto-Index-Section img {
+        width: 300px
+    }
+}
+
 /* <div class="contactanos-index">
                     <div class="fondo-contactanos-index"></div>
                 </div> */
